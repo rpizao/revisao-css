@@ -1,0 +1,79 @@
+@import url(basico.css);
+@import url(form.css);
+
+/* Todos os elementos */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Somente a label com id=detalhe-3 */
+#detalhe-3 {
+    color: grey;
+}
+
+#detalhe-3 > span {
+    font-style: italic;
+}
+
+/* Por tipo de elemento/tag */
+label {
+    font-weight: 600;
+}
+
+/* Por classe */
+.box {
+    width: 100px;
+    height: 200px;
+    /* border-width: 5px; 
+    border-style: solid;
+    border-color: black; */
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+/* Todas as labels contidas na classe box, independente do nível */
+.box label {
+    color: red;
+}
+
+/* Filhos diretos da classe box (primeiros nós) */
+.box > label {
+    color: green;
+}
+/* 
+    .box > label {
+        color: green;
+    }
+
+    Isso afeta!!
+    <div class="box">
+        <label>
+    </div>
+
+    Isso NÃO AFETA!
+    <div class="box">
+        <div>
+            <label />
+        </div>
+    </div>
+*/
+
+/* Aplica comportamentos quando determinadas meta classes
+são aplicadas no nosso HTML, durante a interação do usuário. */
+a:link { cursor: pointer; } /* Antes de haver iteração */
+a:hover { color: red; } /* Passar o mouse sobre o link */
+a:visited { color: grey; } /* Após o link ser visitado */
+
+/* | Estudar sobre :before e :after no CSS | */
+
+/* Todos elementos com classe titulo como primeiros filhos do
+componente pai com classe box. */
+.box > .titulo {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Aplica ao span que vem logo após a um label, no mesmo nível. */
+label + span {
+    font-style: italic;
+}
